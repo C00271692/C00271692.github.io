@@ -1,7 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! My name is Kacper Krakowiak and I am currently in my final year, studying Software Development.<br>
+            I am passionate about programming and I am always looking for new opportunities to learn and grow as a developer. I am also<br> currently
+            work part-time as a Cyber Data Engineer at State Street. I have extensive knowledge in Splunk, AWS and Python. <br>I am also currently
+            working on some side projects in the Data Analysis and Machine Learning field that you can check out in this portfolio. 
+        </p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some of my recent projects:</p>
+        <ul>
+            <li>Project 1: Price of Gold (XAU) Since 2004<br>
+            In this project I aim to create a graph and a line of best fit<br>
+            for the price of gold in the past 20 years </li>
+
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:kacper.krakowiak2002@gmail.com">kacper.krakowiak2002@gmail.com</a>.</p>
+        <p>Check out my GitHub profile: <a href="https://github.com/c00271692" target="_blank">github.com/c00271692</a></p>
+    </section>
+    <footer>
+        &copy; 2024 My Portfolio
+    </footer>
 </body>
 </html>
