@@ -3,78 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Kacper Krakowiak - Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
         }
         nav a {
             color: white;
             margin: 0 1rem;
             text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
-        section {
+        nav a:hover {
+            background-color: #34495e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2rem;
         }
+        section {
+            margin-bottom: 3rem;
+        }
+        .project-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .featured-project {
+            border-left: 5px solid #3498db;
+        }
         footer {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             text-align: center;
             padding: 1rem;
-            position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1>Kacper Krakowiak</h1>
+        <p>Software Developer | Data Engineer | Machine Learning Enthusiast</p>
         <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="mlprojects.html">Projects</a>
+            <a href="finalyearproj.html">Final Year Project</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! My name is Kacper Krakowiak and I am currently in my final year, studying Software Development.<br>
-            I am passionate about programming and I am always looking for new opportunities to learn and grow as a developer. I am also<br> currently
-            work part-time as a Cyber Data Engineer at State Street. I have extensive knowledge in Splunk, AWS and Python. <br>I am also currently
-            working on some side projects in the Data Analysis and Machine Learning field that you can check out in this portfolio. 
-        </p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of my recent projects:</p>
-        <ul>
-            <li>Project 1: Price of Gold (XAU) Since 2004<br>
-            In this project I aim to create a graph and a line of best fit<br>
-            for the price of gold in the past 20 years.</li><br><br><br>
 
-            <li>Project 2: Rain Prediction on a weather forecast dataset.<br>
-            In this Project I create a decision tree based on 5 factors in a dataset: Temperature
-            humidity, wind speed, cloud coverage,<br> pressure and rain influence our training and testing algorithms, which will output
-            the most accurate decision tree, by matching the<br> highest scoring likelyness of combinbations of these factors against the
-            chance of rain, or the chance of no rain.</li>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I'm Kacper Krakowiak, a final-year Software Development student with a passion for programming, data engineering, and machine learning.</p>
+            <p>Currently working part-time as a Cyber Data Engineer at State Street, I've developed expertise in Splunk, AWS, and Python. I'm constantly seeking opportunities to enhance my skills and contribute to innovative projects.</p>
+            <p>Throughout my academic journey, I've worked on diverse projects ranging from predictive algorithms an neural networks to data visualization. My final year project focuses on optimizing test case generation using genetic algorithms.</p>
+            <a href="finalyearproj.html" class="btn">Learn about my Final Year Project</a>
+        </section>
 
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at <a href="mailto:kacper.krakowiak2002@gmail.com">kacper.krakowiak2002@gmail.com</a>.</p>
-        <p>Check out my GitHub profile: <a href="https://github.com/c00271692" target="_blank">github.com/c00271692</a></p>
-    </section>
+        <section id="highlights">
+            <h2>Project Highlights</h2>
+            <div class="project-card featured-project">
+                <h3>Sikraken Test Generation Optimization</h3>
+                <p>My final year project focused on optimizing parameter selection for Sikraken, a C code test case generator, using genetic algorithms to maximize code coverage.</p>
+                <a href="finalyearproj.html" class="btn">View Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Machine Learning Projects</h3>
+                <p>Collection of ML implementations on various datasets.</p>
+                <a href="mlprojects.html#ml" class="btn">View Details</a>
+            </div>
+        </section>
+    </div>
+
     <footer>
-        &copy; 2024 My Portfolio
+        <p>&copy; 2024 Kacper Krakowiak | <a href="mailto:kacper.krakowiak2002@gmail.com" style="color: white;">kacper.krakowiak2002@gmail.com</a> | <a href="https://github.com/c00271692" target="_blank" style="color: white;">GitHub</a></p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Year Project - Kacper Krakowiak</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #34495e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        .project-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .featured-project {
+            border-left: 5px solid #3498db;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            bottom: 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .results-visualization {
+    margin-top: 2rem;
+    background-color: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.result-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.result-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+.result-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.result-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.result-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.result-analysis {
+    font-weight: 500;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+h4, h5 {
+    color: #2c3e50;
+}
+
+h5 {
+    margin-bottom: 0.75rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kacper Krakowiak</h1>
+        <p>Software Developer | Data Engineer | Machine Learning Enthusiast</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mlprojects.html">Projects</a>
+            <a href="finalyearproj.html">Final Year Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="final-project">
+            <h2>Final Year Project: Optimizing Test Case Generation with Genetic Algorithms</h2>
+            
+            <div class="project-section">
+                <h3>Project Overview</h3>
+                <p>My final year project focused on developing an optimization tool for Sikraken, a C code test case generator, originally developed by Dr Chris Meudec (see Original Sikraken GitHub:<a href="https://github.com/echancrure/Sikraken)" target="_blank"> SikrakenMainRepository</a>). 
+                I implemented a genetic algorithm to find the optimal parameter values for test case generation, significantly 
+                improving code coverage and reducing execution time.</p>
+            </div>
+            
+            <div class="project-section">
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li><strong>Python:</strong> Core implementation language</li>
+                    <li><strong>Genetic Algorithms:</strong> Evolutionary computation technique</li>
+                    <li><strong>Concurrent Execution:</strong> Parallelized processing for performance</li>
+                    <li><strong>Sikraken:</strong> C code test case generator</li>
+                    <li><strong>TestCov:</strong> Code coverage measurement tool</li>
+                </ul>
+            </div>
+            
+            <div class="project-section">
+                <h3>The Problem</h3>
+                <p>Sikraken is a powerful tool for generating test cases for C programs, but it requires careful parameter tuning. 
+                Two critical parameters, <code>$restarts</code> and <code>$tries</code>, control how the generator escapes loops and 
+                how many attempts it makes. Finding optimal values for these parameters was previously a manual process.</p>
+            </div>
+            
+            <div class="project-section">
+                <h3>My Solution</h3>
+                <p>I designed a genetic algorithm that:</p>
+                <ul>
+                    <li>Creates a population of parameter pairs</li>
+                    <li>Evaluates each pair by running Sikraken/TestCov and measuring code coverage</li>
+                    <li>Evolves better solutions through selection, crossover, and mutation over iterations</li>
+                    <li>Uses parallelized execution to significantly reduce optimization time</li>
+                </ul>
+                <p>The algorithm automatically identifies optimal parameter values that maximize code coverage while minimizing execution time.</p>
+            </div>
+            
+            <div class="project-section">
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><strong>Performance Bottleneck:</strong> Running Sikraken and TestCov sequentially was time-consuming. 
+                    I implemented parallel execution with proper synchronization to achieve significant speedup.</li>
+                    <li><strong>Resource Conflicts:</strong> TestCov had issues with concurrent execution. I implemented a locking mechanism 
+                    to ensure reliable coverage measurement.</li>
+                    <li><strong>Parameter Space Exploration:</strong> The algorithm needed to efficiently explore a large parameter space. 
+                    I balanced exploration and exploitation through, selection, crossover, and mutation rates.</li>
+                </ul>
+            </div>
+            
+            <div class="project-section">
+                <h3>Results</h3>
+                <p>The genetic algorithm successfully identified optimal parameter combinations that:</p>
+                <ul>
+                    <li>Increased code coverage to default hard set values</li>
+                    <li>Reduced the time required to find optimal parameters</li>
+                    <li>Provided consistent results across different C programs</li>
+                </ul>
+
+                <div class="results-visualization">
+                    <h4>Performance Comparison: GA vs Random Search</h4>
+                    
+                    <div class="result-comparison">
+                        <div class="result-item">
+                            <h5>Problem 3 - Genetic Algorithm Results</h5>
+                            <img src="GAResults/Problem03GATest1.png" alt="Problem 3 GA Results" class="result-image">
+                            <p class="result-caption">The genetic algorithm convergence for Problem03, showing coverage improvement over generations.</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h5>Problem 3 - Random Search Comparison</h5>
+                            <img src="GAResults/Problem03Random100Test1.png" alt="Problem 3 Random Search Results" class="result-image">
+                            <p class="result-caption">Random search results for the same problem, showing less consistent coverage.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-comparison">
+                        <div class="result-item">
+                            <h5>Problem 16 - Genetic Algorithm Results</h5>
+                            <img src="GAResults/Problem16GATest1.png" alt="Problem 16 GA Results" class="result-image">
+                            <p class="result-caption">The genetic algorithm convergence for Problem16, demonstrating fast optimization.</p>
+                        </div>
+                        
+                        <div class="result-item">
+                            <h5>Problem 16 - Random Search Comparison</h5>
+                            <img src="GAResults/Problem16Random100Test1.png" alt="Problem 16 Random Search Results" class="result-image">
+                            <p class="result-caption">Random search results for Problem16, showing inferior performance compared to GA.</p>
+                        </div>
+                    </div>
+                    
+                    <p class="result-analysis">As demonstrated by these graphs, the genetic algorithm consistently outperformed random parameter selection, finding optimal parameter combinations in fewer iterations and achieving higher code coverage.</p>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <h3>Future Work</h3>
+                <p>This project could be extended by:</p>
+                <ul>
+                    <li>Optimizing additional Sikraken parameters beyond $restarts and $tries</li>
+                </ul>
+            </div>
+            
+            <div class="project-section">
+                <h3>Code Repository</h3>
+                <p>The source code for this project is available on <a href="https://github.com/c00271692" target="_blank">GitHub</a>.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kacper Krakowiak | <a href="mailto:kacper.krakowiak2002@gmail.com" style="color: white;">kacper.krakowiak2002@gmail.com</a> | <a href="https://github.com/c00271692" target="_blank" style="color: white;">GitHub</a></p>
+    </footer>
+</body>
+</html>
