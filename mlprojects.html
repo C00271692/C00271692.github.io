@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Projects - Kacper Krakowiak</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #34495e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        .project-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .featured-project {
+            border-left: 5px solid #3498db;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            bottom: 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .semester-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .semester-nav a {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            margin: 0.5rem;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        .semester-nav a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        .semester-heading {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            gap: 0.5rem;
+        }
+        .tech-tag {
+            background-color: #e7f5ff;
+            color: #1864ab;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+        .results-highlight {
+            background-color: #f0f9ff;
+            border-left: 4px solid #3498db;
+            padding: 0.8rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kacper Krakowiak</h1>
+        <p>Software Developer | Data Engineer | Machine Learning Enthusiast</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mlprojects.html">Projects</a>
+            <a href="finalyearproj.html">Final Year Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Machine Learning Projects</h1>
+        <p>Throughout my final year, I've experimented with a range of machine learning projects across different domains. 
+           These projects showcase my skills in data preprocessing, model development, evaluation, and interpretation.</p>
+        
+        <div class="semester-nav">
+            <a href="#semester1">Semester 1</a>
+            <a href="#semester2-batch1">Semester 2: Classical ML</a>
+            <a href="#semester2-nn">Semester 2: Neural Networks</a>
+        </div>
+        
+        <!-- Semester 1 -->
+        <section id="semester1">
+            <h2 class="semester-heading">Semester 1: Data Science Fundamentals</h2>
+            
+            <div class="project-card">
+                <h3>Linear and Polynomial Regression - Gold Price Analysis</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Matplotlib</span>
+                    <span class="tech-tag">Time Series Analysis</span>
+                </div>
+                <p>This project focused on analyzing historical gold price data (from 2004 to 2024) to identify patterns and trends. 
+                   Using various statistical techniques, I preprocessed the data, performed linear and polynomial regression data analysis, and created a graph for both.</p>
+                
+                <div class="results-highlight">
+                    <strong>Key Findings:</strong> taught the model on a fluctuating graph, and created a line of best fit (linear and polynomial).
+                </div>
+                
+                <p>The analysis utilized the XAU_1Month_data dataset and implemented Linear/polynomial Regression models to map the prices on a simple 2D x,y plain.</p>
+            </div>
+            
+            <div class="project-card">
+                <h3>Decision Tree for Weather Prediction</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Decision Trees</span>
+                    <span class="tech-tag">Sklearn</span>
+                    <span class="tech-tag">Weather Forecasting</span>
+                    <span class="tech-tag">Feature Selection</span>
+                </div>
+                <p>Developed a decision tree model to predict weather patterns using the 'weather_forecast_data.csv' dataset. This project demonstrates my ability to implement classification algorithms for real-world prediction problems.</p>
+                
+                <div class="results-highlight">
+                    <strong>Key Achievements:</strong> Created an interpretable model that can predict weather conditions with significant accuracy based on meteorological features.
+                </div>
+                
+                <p>The implementation included pre-processing of weather data, feature selection to identify the most predictive variables, and visualization of the decision tree for interpretability. I also evaluated the model's performance using cross-validation and confusion matrices.</p>
+            </div>
+            
+        </section>
+        
+        <!-- Semester 2: Batch 1 (Classical ML) -->
+<section id="semester2-batch1">
+    <h2 class="semester-heading">Semester 2: Classical Machine Learning Algorithms</h2>
+    
+    <div class="project-card featured-project">
+        <h3>Large-Scale ML with GPU Acceleration</h3>
+        <div class="project-tech">
+            <span class="tech-tag">Naive Bayes</span>
+            <span class="tech-tag">SVM</span>
+            <span class="tech-tag">KNN</span>
+            <span class="tech-tag">K-Means Clustering</span>
+            <span class="tech-tag">CUDA</span>
+            <span class="tech-tag">GPU Parallelization</span>
+        </div>
+        <p>Tackled the challenge of applying multiple ML algorithms to a massive dataset 'all_car_adverts.csv', containing approximately 800,000 rows and 32 columns. 
+           This project demonstrates my ability to handle big data and optimize computational resources for machine learning tasks.</p>
+        
+        <div class="results-highlight">
+            <strong>Technical Achievement:</strong> Successfully leveraged GPU computing with CUDA cores to process the dataset, reducing 
+            training time from days to hours compared to CPU-only approaches.
+        </div>
+        
+        <p>I implemented and compared four different algorithms (Naive Bayes, Support Vector Machines, K-Nearest Neighbors, and K-Means Clustering) on this large-scale dataset.
+           Each algorithm required specific optimizations to efficiently utilize GPU resources:</p>
+        
+        <ul>
+            <li><strong>Naive Bayes:</strong> Implemented batch processing techniques to manage memory constraints while maintaining accuracy</li>
+            <li><strong>SVM:</strong> Utilized CUDA-accelerated kernels to speed up complex matrix calculations essential for large datasets</li>
+            <li><strong>KNN:</strong> Created custom distance computation methods optimized for parallel execution on GPU</li>
+            <li><strong>K-Means:</strong> Developed specialized data partitioning strategies to enable efficient clustering of high-dimensional data</li>
+        </ul>
+        
+        <p>The project required extensive tweaking of various GPU configurations, memory management, and algorithm-specific optimizations
+           to achieve acceptable performance with such a large dataset.</p>
+        
+        <div class="results-highlight">
+            <strong>Results Comparison:</strong> GPU-accelerated implementations achieved significant speedup compared to CPU versions while maintaining comparable accuracy.
+            SVM particularly bproved to be extremely computationally intensive.
+        </div>
+    </div>
+    
+    
+</section>
+        
+        <!-- Semester 2: Neural Networks -->
+        <section id="semester2-nn">
+            <h2 class="semester-heading">Semester 2: Neural Network Projects</h2>
+            
+            <div class="project-card featured-project">
+                <h3>CNN for Sign Language Recognition</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Convolutional Neural Networks</span>
+                    <span class="tech-tag">Image Classification</span>
+                    <span class="tech-tag">TensorFlow/Keras</span>
+                    <span class="tech-tag">Data Augmentation</span>
+                </div>
+                <p>Developed a Convolutional Neural Network (CNN) to recognize sign language gestures from images. This project 
+                   demonstrates my understanding of deep learning techniques for computer vision problems.</p>
+                
+                <p>The model architecture includes convolutional layers, pooling layers, and fully connected layers, designed to capture 
+                   hierarchical features in the sign language images. I implemented techniques like dropout and batch normalization 
+                   to prevent overfitting.</p>
+                
+                <div class="results-highlight">
+                    <strong>Results:</strong> Achieved over 95% accuracy on the test set, making the model practical for real-world applications.
+                </div>
+                
+                <p>The trained model was saved as 'asl_sign_language_model.h5' and can be deployed for real-time sign language 
+                   translation. I also created a detailed explanation of the CNN architecture and its design choices in 
+                   'ExplanationofCNNModelArch.md'.</p>
+            </div>
+            
+            <div class="project-card">
+                <h3>Recurrent Neural Networks for Sequence Analysis</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">RNN</span>
+                    <span class="tech-tag">LSTM</span>
+                    <span class="tech-tag">Sequence Prediction</span>
+                    <span class="tech-tag">NLP</span>
+                </div>
+                <p>Implemented Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks for sequence analysis 
+                   tasks. This project demonstrates my ability to work with sequential data and time-dependent patterns.</p>
+                
+                <p>The models were trained on Shakespearean text data for language processing tasks such as sentiment analysis and text 
+                   generation. I experimented with different network architectures, temperatures, embedding techniques, and sequence lengths to 
+                   optimize performance.</p>
+                
+                <div class="results-highlight">
+                    <strong>Key Achievement:</strong> Successfully implemented an LSTM model that could generate coherent Shakespearean text passages 
+                    after training on a large dataset of his writing.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kacper Krakowiak | <a href="mailto:kacper.krakowiak2002@gmail.com" style="color: white;">kacper.krakowiak2002@gmail.com</a> | <a href="https://github.com/c00271692" target="_blank" style="color: white;">GitHub</a></p>
+    </footer>
+</body>
+</html>
