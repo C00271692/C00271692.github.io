@@ -132,6 +132,78 @@ h4, h5 {
 h5 {
     margin-bottom: 0.75rem;
 }
+
+/* Documentation Section Styles */
+.documentation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.doc-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.doc-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.doc-card h4 {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.doc-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.doc-link {
+    display: inline-block;
+    color: white;
+    background-color: #3498db;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.doc-link:hover {
+    background-color: #2980b9;
+}
+
+.embedded-doc {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.embedded-doc h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -243,6 +315,42 @@ h5 {
                 </div>
             </div>
             
+            <div class="project-section" id="documentation">
+                <h3>Project Documentation</h3>
+                <p>Below you can find detailed documentation for this project. Click on any document to view it in your browser.</p>
+                
+                <div class="documentation-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">📄</div>
+                        <h4>Functional Specification</h4>
+                        <p>Detailed description of project requirements, features, and success metrics.</p>
+                        <a href="ProjDocs/Sikraken Functonal Spec.pdf" class="doc-link" target="_blank">View Document</a>
+                    </div>
+                    
+                    <div class="doc-card">
+                        <div class="doc-icon">📑</div>
+                        <h4>Design Manual</h4>
+                        <p>Technical design, architecture details, and implementation approach.</p>
+                        <a href="ProjDocs/Sikraken Optimization Design Manual (1).pdf" class="doc-link" target="_blank">View Document</a>
+                    </div>
+                    
+                    <div class="doc-card">
+                        <div class="doc-icon">🖼️</div>
+                        <h4>Project Poster</h4>
+                        <p>Visual overview of the project, methodology, and results.</p>
+                        <a href="ProjDocs/Sikraken Poster.pdf" class="doc-link" target="_blank">View Document</a>
+                    </div>
+                </div>
+                
+                <!--<div class="embedded-doc">
+                    <h4>Preview: Functional Specification</h4>
+                    <object data="ProjDocs/Sikraken Functonal Spec.pdf" type="application/pdf" width="100%" height="500px">
+                        <p>Your browser doesn't support embedded PDFs. 
+                        <a href="ProjDocs/Sikraken Functonal Spec.pdf">Click here to view the document</a>.</p>
+                    </object>
+                </div> -->
+            </div>
+
             <div class="project-section">
                 <h3>Future Work</h3>
                 <p>This project could be extended by:</p>
