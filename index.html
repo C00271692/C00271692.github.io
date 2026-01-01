@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kacper Krakowiak - Portfolio</title>
     <style>
-        body {
+        html, body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         header {
             background-color: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         nav {
             display: flex;
@@ -76,6 +79,23 @@
         .btn:hover {
             background-color: #2980b9;
         }
+        .uni-logo {
+            position: absolute;
+            top: 0.5rem;
+            max-height: 110px;
+            width: auto;
+        }
+        .uni-logo.dcu {
+            left: 0.5rem;
+        }
+        .uni-logo.setu {
+            right: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .uni-logo {
+                max-height: 80px;
+            }
+        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9LWXWYHJ1"></script>
@@ -90,6 +110,8 @@
 </head>
 <body>
     <header>
+        <img src="Dublin-City-University-DCU-Logo-Vector.svg-.png" alt="Dublin City University (DCU) logo" class="uni-logo dcu">
+        <img src="setu_logo_navy_bg_a1dcb81403a2f417e019929f519bbb18.jpg" alt="South East Technological University (SETU) logo" class="uni-logo setu">
         <h1>Kacper Krakowiak</h1>
         <p>Software Developer | Data Engineer | Machine Learning Enthusiast</p>
         <nav>
@@ -103,9 +125,10 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Welcome to my portfolio! I'm Kacper Krakowiak, a final-year Software Development student with a passion for programming, data engineering, and machine learning.</p>
-            <p>Currently working part-time as a Cyber Data Engineer at State Street, I've developed expertise in Splunk, AWS, and Python. I'm constantly seeking opportunities to enhance my skills and contribute to innovative projects.</p>
-            <p>Throughout my academic journey, I've worked on diverse projects ranging from predictive algorithms an neural networks to data visualization. My final year project focuses on optimizing test case generation using Genetic Algorithms.</p>
+            <p>Welcome to my portfolio! I'm Kacper Krakowiak, a Software Developer and Cyber Data Engineer currently studying a <strong>Masters of Computing – (Artificial Intelligence)</strong> at Dublin City University (DCU).</p>
+            <p>In my Masters I am building a strong foundation in AI with a heavy focus on data: cleaning, preprocessing, transforming and validating datasets so they are ready for machine learning. I care a lot about data quality, because I know that poor data almost always leads to poor AI results.</p>
+            <p>Before starting my Masters I completed a Software Development degree where I worked on projects ranging from predictive algorithms and neural networks to data visualisation. My final-year project used Genetic Algorithms to optimise test case generation for C code in Sikraken, and during my year-and-a-half internship as a Cyber Data Engineer at State Street I gained hands-on experience with Splunk, AWS and Python on real-world security and data challenges.</p>
+            <p>I'm excited to move into roles where I can combine solid data engineering practices with practical machine learning and AI – whether that’s building reliable data pipelines, experimenting with models, or turning ideas into production ready solutions.</p>
             <a href="finalyearproj.html" class="btn">Learn about my Final Year Project</a>
         </section>
 
@@ -125,7 +148,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Kacper Krakowiak | <a href="mailto:kacper.krakowiak2002@gmail.com" style="color: white;">kacper.krakowiak2002@gmail.com</a> | <a href="https://github.com/c00271692" target="_blank" style="color: white;">GitHub</a></p>
+        <p>&copy; 2024 Kacper Krakowiak | <a href="mailto:kacper.krakowiak2002@gmail.com" style="color: white;">kacper.krakowiak2002@gmail.com</a> | <a href="https://github.com/c00271692" target="_blank" style="color: white;">GitHub</a> | <a href="https://www.linkedin.com/in/kacper-k-8b6558321/" target="_blank" style="color: white;">LinkedIn</a></p>
     </footer>
 </body>
 </html>
